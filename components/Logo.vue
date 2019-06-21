@@ -2,7 +2,6 @@
   <nuxt-link class="logo" to="/">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      :width="width"
       :fill="fill"
       viewBox="0 0 480.5 120.9"
     >
@@ -23,10 +22,6 @@
 <script>
 export default {
   props: {
-    width: {
-      type: Number,
-      default: 480
-    },
     fill: {
       type: String,
       default: '#000000'
@@ -37,6 +32,8 @@ export default {
 
 <style lang="scss">
 .logo {
+  width: 100%;
+
   svg {
     height: auto;
   }

@@ -28,13 +28,6 @@ export default {
   width: max-content;
   padding: 0 10px;
   margin-bottom: vh(40px);
-
-  &:hover,
-  &:focus {
-    .red-flesh {
-      width: 100%;
-    }
-  }
 }
 
 h1 {
