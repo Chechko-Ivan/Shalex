@@ -43,5 +43,5 @@ a {
 .page-enter,
 .page-leave-active {
   opacity: 0;
-  transform: translate(2em, 0);
+  transform: translate(0, -2em);
 }

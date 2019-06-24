@@ -1,12 +1,28 @@
 <template>
   <div class="app-wrapper">
     <div class="app-header_fixed-nav">
-      <Burger @open-menu="toggleMenu"></Burger>
-      <div class="app-header_logo">
+      <Burger
+        data-aos="fade"
+        data-aos-duration="800"
+        data-aos-delay="700"
+        @open-menu="toggleMenu"
+      ></Burger>
+      <div
+        class="app-header_logo"
+        data-aos="fade"
+        data-aos-duration="800"
+        data-aos-delay="800"
+      >
         <Logo></Logo>
       </div>
     </div>
-    <Nav v-if="menuOpen" @close-menu="toggleMenu"></Nav>
+    <Nav
+      v-if="menuOpen"
+      data-aos="zoom-out-right"
+      data-aos-delay="50"
+      data-aos-duration="500"
+      @close-menu="toggleMenu"
+    ></Nav>
     <header
       class="app-header"
       :style="`background-image: url(${Headerbackground});`"
@@ -16,11 +32,19 @@
           :title="HeaderTitle"
           :text="HeaderText"
           :is-link="false"
+          data-aos="fade"
+          data-aos-delay="600"
+          data-aos-duration="1000"
         ></TitleBox>
       </div>
     </header>
 
-    <section class="aubout-us">
+    <section
+      class="aubout-us"
+      data-aos="slide-up"
+      data-aos-delay="900"
+      data-aos-duration="800"
+    >
       <a
         v-scroll-to="'#s-about'"
         class="aubout-us_scroll-bottom"
@@ -34,10 +58,20 @@
         </svg>
       </a>
       <div id="s-about" class="aubout-us_content">
-        <h2 class="aubout-us_title">
+        <h2
+          class="aubout-us_title"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
           Meeting the highest quality demands is our commitment to quality
         </h2>
-        <p class="aubout-us_text">
+        <p
+          class="aubout-us_text"
+          data-aos="fade-up"
+          data-aos-delay="150"
+          data-aos-duration="1000"
+        >
           We’re living in exciting times of an exponential audio technology
           revolution. Remember how not long ago people didn’t have mobile
           phones? Or internet? In the blink of an eye it’s become impossible to
@@ -53,15 +87,25 @@
           <div
             class="s-products_image"
             :style="`background-image: url('${ProductImage}');`"
+            data-aos="fade"
+            data-aos-delay="100"
+            data-aos-duration="1000"
           ></div>
-          <span class="s-products_image-desc">
+          <span
+            class="s-products_image-desc"
+            data-aos="fade"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
             Own WAREHOUSES /
             <strong>Best QUALITY & SERVICE</strong>
           </span>
         </div>
         <div class="s-products_title">
-          <h2>What we offer</h2>
-          <ul>
+          <h2 data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
+            What we offer
+          </h2>
+          <ul data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
             <li>- Metals and scrap</li>
             <li>- Ferroalloys</li>
             <li>- Oxides</li>
@@ -69,7 +113,13 @@
         </div>
       </div>
 
-      <div id="s-products" class="s-products_items-wrapper">
+      <div
+        id="s-products"
+        class="s-products_items-wrapper"
+        data-aos="fade"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+      >
         <template v-for="product in productData">
           <div :key="product.id" class="s-products_items">
             <div class="s-products_items-title">
@@ -92,16 +142,27 @@
     <section id="s-whu-us" class="s-whu-us">
       <div class="s-whu-us_container">
         <div class="s-whu-us_title">
-          <h2>Why you should work with us</h2>
+          <h2 data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
+            Why you should work with us
+          </h2>
           <span class="s-whu-us_breadcrumbs">
-            <span class="accent">01</span> / PASSIONED
-            <span class="accent">02</span> / MOTIVATED
-            <span class="accent">03</span> / HARD WORKING
+            <span class="accent">01</span>
+            / PASSIONED
+            <span class="accent">02</span>
+            / MOTIVATED
+            <span class="accent">03</span>
+            / HARD WORKING
           </span>
         </div>
         <div class="s-whu-us_content">
           <ul class="s-whu-us_nav">
-            <li v-for="navItem in tabNav" :key="navItem.id">
+            <li
+              v-for="navItem in tabNav"
+              :key="navItem.id"
+              data-aos="fade-up"
+              :data-aos-delay="`${navItem.id}00`"
+              data-aos-duration="1000"
+            >
               <button
                 :class="{ active: navItem.active }"
                 @click="changeTab(navItem.id)"
@@ -110,7 +171,12 @@
               </button>
             </li>
           </ul>
-          <span class="s-whu-us_breadcrumbs">
+          <span
+            class="s-whu-us_breadcrumbs"
+            data-aos="fade"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
             OWN WAREHOUSES /
             <span class="accent">{{ tabData[currentTabData - 1].title }}</span>
           </span>
@@ -118,6 +184,9 @@
             v-for="(text, index) in tabData[currentTabData - 1].text"
             :key="index"
             class="s-whu-us_text"
+            data-aos="fade-up"
+            :data-aos-delay="`${index}00`"
+            data-aos-duration="1000"
           >
             {{ text }}
           </p>
@@ -127,8 +196,17 @@
 
     <section id="s-contacts" class="s-contacts">
       <div class="s-contacts_container">
-        <div class="s-contacts_banner">
-          <span>
+        <div
+          class="s-contacts_banner"
+          data-aos="fade"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
+          <span
+            data-aos="fade-left"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 407.437 407.437"
@@ -144,7 +222,12 @@
           </span>
         </div>
 
-        <div class="s-contacts_form">
+        <div
+          class="s-contacts_form"
+          data-aos="zoom-out"
+          data-aos-delay="500"
+          data-aos-duration="900"
+        >
           <Form></Form>
         </div>
       </div>
@@ -157,11 +240,21 @@
     <section class="s-banner">
       <div class="s-banner_container">
         <div class="s-banner_col">
-          <h2 class="s-banner_title">
+          <h2
+            class="s-banner_title"
+            data-aos="fade"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
             Simple as bottle of water.
             <br />Trust & security is our priority.
           </h2>
-          <p class="s-banner_text">
+          <p
+            class="s-banner_text"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
             This is the perfect app for coffee lovers, which can build a route
             to your favourite coffee house, or find the nearest replacement. You
             can also enter the name of the coffee shop in the search space and
@@ -170,7 +263,11 @@
           </p>
         </div>
         <div class="s-banner_col">
-          <Button></Button>
+          <Button
+            data-aos="fade"
+            data-aos-delay="300"
+            data-aos-duration="900"
+          ></Button>
         </div>
       </div>
     </section>

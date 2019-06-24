@@ -10,15 +10,21 @@
           class="hero_title-box"
           :title="trade.title"
           :text="trade.text"
+          data-aos="fade-up"
+          data-aos-delay="2200"
+          data-aos-duration="1000"
         ></TitleBox>
       </nuxt-link>
 
-      <nuxt-link class="hero_link" to="/">
+      <nuxt-link class="hero_link" to="/logistics">
         <div class="hero_bg"></div>
         <TitleBox
           class="hero_title-box"
           :title="logistics.title"
           :text="logistics.text"
+          data-aos="fade-up"
+          data-aos-delay="2300"
+          data-aos-duration="1000"
         ></TitleBox>
       </nuxt-link>
     </div>

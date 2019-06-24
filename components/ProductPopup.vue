@@ -2,13 +2,26 @@
   <div class="product-popup">
     <div class="product-popup_container">
       <div class="product-popup_title">
-        <h3>{{ data.title }}</h3>
+        <h3 data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
+          {{ data.title }}
+        </h3>
         <span class="flesh"></span>
       </div>
-      <p class="product-popup_text">{{ data.text }}</p>
+      <p
+        class="product-popup_text"
+        data-aos="fade-up"
+        data-aos-delay="250"
+        data-aos-duration="1000"
+      >
+        {{ data.text }}
+      </p>
 
       <div class="button-wrapper">
-        <Button></Button>
+        <Button
+          data-aos="fade"
+          data-aos-delay="500"
+          data-aos-duration="1000"
+        ></Button>
       </div>
     </div>
 
