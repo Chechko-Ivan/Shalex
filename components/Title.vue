@@ -31,7 +31,6 @@ export default {
 }
 
 h1 {
-  margin-top: 0;
   margin: 0;
   position: relative;
   font-size: em(64px);

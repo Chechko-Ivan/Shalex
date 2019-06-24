@@ -1,15 +1,10 @@
 <template>
   <div class="hero">
     <Logo fill="#ffffff" class="hero_logo"></Logo>
-    <div id="hero-animation-bg" class="hero_animation-bg"></div>
+    <div class="hero_animation-bg"></div>
+    <div class="hero_animation-bg second"></div>
     <div class="hero_container">
-      <nuxt-link
-        class="hero_link"
-        to="/"
-        data-aos="slide-up"
-        data-aos-duration="750"
-        data-aos-delay="1800"
-      >
+      <nuxt-link class="hero_link hero_link-first" to="/trade">
         <div class="hero_bg"></div>
         <TitleBox
           class="hero_title-box"
@@ -17,13 +12,8 @@
           :text="trade.text"
         ></TitleBox>
       </nuxt-link>
-      <nuxt-link
-        class="hero_link"
-        to="/"
-        data-aos="slide-up"
-        data-aos-duration="750"
-        data-aos-delay="1900"
-      >
+
+      <nuxt-link class="hero_link" to="/">
         <div class="hero_bg"></div>
         <TitleBox
           class="hero_title-box"
@@ -60,17 +50,15 @@ export default {
 
   mounted() {
     const hero = document.querySelector('.hero_container')
-    const bg = document.getElementById('hero-animation-bg')
+    const bg = document.querySelectorAll('.hero_animation-bg')
     hero.style.opacity = 0
-    bg.classList.add('action')
-    setTimeout(() => {
-      bg.classList.add('pause')
-      hero.style.opacity = 1
-      // hero.style.backgroundColor = '#000000'
+    for (let i = 0; i < bg.length; i++) {
+      bg[i].classList.add('firstAction')
       setTimeout(() => {
-        bg.classList.remove('pause')
-      }, 800)
-    }, 1000)
+        bg[i].classList.add('secondAction')
+        hero.style.opacity = 1
+      }, 1800)
+    }
   }
 }
 </script>
@@ -101,11 +89,11 @@ export default {
     width: 480px;
     z-index: 101;
     opacity: 0;
-    animation-name: logoAnimation;
-    animation-delay: 0.68s;
-    animation-duration: 1s;
+    animation-name: thirdAction;
     animation-fill-mode: forwards;
-    animation-timing-function: linear;
+    animation-delay: 0.9s;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
 
     @media (max-width: $xl) {
       width: 400px;
@@ -186,44 +174,63 @@ export default {
   &_animation-bg {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    width: 50%;
+    height: 100%;
     background-color: $black;
     z-index: 100;
+    transform: translateY(100%);
 
-    &.action {
-      animation-name: heroAnimation;
-      animation-duration: 2s;
-      animation-timing-function: ease;
+    &:first-of-type {
+      left: 0;
+
+      &.secondAction {
+        animation-name: secondAction;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.6, 0.05, 0.4, 1);
+      }
     }
 
-    &.pause {
-      animation-play-state: paused;
+    &.second {
+      right: 0;
+
+      &.secondAction {
+        animation-name: secondAction;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.6, 0.05, 0.4, 1);
+      }
+    }
+
+    &.firstAction {
+      animation-name: firstAction;
+      animation-duration: 0.9s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.6, 0.05, 0.4, 1);
     }
   }
 }
 
-@keyframes heroAnimation {
-  0% {
-    height: 0%;
-    bottom: 0;
+@keyframes firstAction {
+  100% {
+    transform: translateY(0%);
   }
+}
 
-  52% {
-    height: 100%;
-    bottom: 0%;
+@keyframes secondAction {
+  0% {
+    transform: translateY(0%);
   }
 
   100% {
-    height: 0%;
-    bottom: 100%;
+    transform: translateY(-100%);
   }
 }
 
-@keyframes logoAnimation {
+@keyframes thirdAction {
   0% {
     opacity: 0;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, 0%);
   }
 
   100% {

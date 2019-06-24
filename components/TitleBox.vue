@@ -2,6 +2,7 @@
   <div class="title-box">
     <Title :title="title"></Title>
     <span class="title-box_text">{{ text }}</span>
+    <span v-if="isLink" class="title-box_link">More Information</span>
   </div>
 </template>
 
@@ -23,6 +24,10 @@ export default {
       type: String,
       default: 'Text',
       required: true
+    },
+    isLink: {
+      type: Boolean,
+      default: true
     }
   }
 }
@@ -56,6 +61,25 @@ export default {
     color: $white;
     letter-spacing: 0;
     line-height: 1.3;
+
+    @media (max-width: $sm) {
+      margin-top: vh(20px);
+      font-size: em(20px);
+    }
+  }
+
+  &_link {
+    color: $white;
+    font-size: em(14px);
+    margin-top: vh(55px);
+    text-decoration: underline;
+    line-height: 1;
+    text-decoration-style: dashed;
+    text-transform: uppercase;
+
+    @media (max-width: $sm) {
+      margin-top: vh(20px);
+    }
   }
 }
 </style>
