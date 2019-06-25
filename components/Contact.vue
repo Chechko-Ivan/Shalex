@@ -98,6 +98,13 @@ export default {
       }
     }
 
+    @media (max-width: $sm) {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      /* justify-content: space-between; */
+    }
+
     svg {
       width: vw(50px);
       height: vw(50px);

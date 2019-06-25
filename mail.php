@@ -4,12 +4,11 @@ $mail=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
 $tel=filter_input(INPUT_POST,'tel',FILTER_SANITIZE_STRING);
 $company=filter_input(INPUT_POST,'company',FILTER_SANITIZE_STRING);
 $mes=filter_input(INPUT_POST,'message',FILTER_SANITIZE_STRING);
-// $pickedServices=filter_input(INPUT_POST,'pickedServices',FILTER_SANITIZE_STRING);
 if(!$mail){
     header('HTTP/1.0 400 Bad Request',400);
     return 'invalid email';
 }
-$to = 'chechkovania@gmail.com';
+$to = 'info@maksis.by';
 // емайл получателя
 
 $subject = "Mail from site";
@@ -18,9 +17,7 @@ $subject = "Mail from site";
 $message = "Пользователь {$name},<br> компания {$company}, <br>";
 $message.="email: {$mail}, <br> телефон {$tel} <br>";
 $message.="<br>";
-// $message.="Выбраный сервис: {$pickedServices}<br>";
 $message.="Сообщение: ".striptags($mes);
-// текст сообщения, здесь вы можете вставлять таблицы, рисунки, заголовки, оформление цветом и т.п.
 
 $mailheaders = "Content-type:text/html;charset=UTF-8";
 // формат письма html

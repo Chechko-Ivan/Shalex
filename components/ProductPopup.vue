@@ -18,9 +18,11 @@
 
       <div class="button-wrapper">
         <Button
+          v-scroll-to="'#s-form'"
           data-aos="fade"
           data-aos-delay="500"
           data-aos-duration="1000"
+          @handle-click="closePopup"
         ></Button>
       </div>
     </div>
@@ -47,7 +49,9 @@ export default {
 
   methods: {
     closePopup() {
-      this.$emit('close-popup')
+      setTimeout(() => {
+        this.$emit('close-popup')
+      }, 50)
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <button class="button-main">
+  <button class="button-main" @click="handleClick">
     <svg
       class="button-main_icon"
       xmlns="http://www.w3.org/2000/svg"
@@ -22,6 +22,12 @@ export default {
 
   computed: {
     ButtonDecor: () => ButtonDecor
+  },
+
+  methods: {
+    handleClick() {
+      this.$emit('handle-click')
+    }
   }
 }
 </script>

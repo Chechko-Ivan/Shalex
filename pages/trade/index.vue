@@ -1,20 +1,10 @@
 <template>
   <div class="app-wrapper">
     <div class="app-header_fixed-nav">
-      <Burger
-        data-aos="fade"
-        data-aos-duration="800"
-        data-aos-delay="700"
-        @open-menu="toggleMenu"
-      ></Burger>
-      <div
-        class="app-header_logo"
-        data-aos="fade"
-        data-aos-duration="800"
-        data-aos-delay="800"
-      >
+      <Burger @open-menu="toggleMenu"></Burger>
+      <!-- <div class="app-header_logo">
         <Logo></Logo>
-      </div>
+      </div>-->
     </div>
     <Nav
       v-if="menuOpen"
@@ -224,6 +214,7 @@
         </div>
 
         <div
+          id="s-form"
           class="s-contacts_form"
           data-aos="zoom-out"
           data-aos-delay="500"
@@ -292,7 +283,7 @@ import ProductSxema from '@/static/trade-sxema-1.png'
 import ContactDecor from '@/static/trade-contacts-image.jpg'
 
 import Burger from '@/components/Burger.vue'
-import Logo from '@/components/Logo.vue'
+// import Logo from '@/components/Logo.vue'
 import TitleBox from '@/components/TitleBox.vue'
 import Nav from '@/components/Nav.vue'
 import ProductPopup from '@/components/ProductPopup.vue'
@@ -306,7 +297,7 @@ export default {
 
   components: {
     Burger,
-    Logo,
+    // Logo,
     TitleBox,
     Nav,
     ProductPopup,

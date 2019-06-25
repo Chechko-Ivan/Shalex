@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer" :class="{ footerLogistics: !formTrade }">
+  <footer class="footer">
     <div class="footer_container">
       <h2 data-aos="fade" data-aos-delay="250" data-aos-duration="1000">
         {{ title }}
@@ -32,7 +32,7 @@
       :style="`background-image: url('${formTrade ? img1 : img2}');`"
     ></div>
 
-    <img v-if="formTrade" src="@/static/x.png" class="footer_decor" alt="x" />
+    <img src="@/static/x.png" class="footer_decor" alt="x" />
   </footer>
 </template>
 

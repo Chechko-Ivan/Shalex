@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 html {
   font-size: 16px;
   word-spacing: 1px;
@@ -92,5 +92,9 @@ button {
   border-radius: 50%;
   transition: transform 300ms cubic-bezier(0.77, 0, 0.175, 1);
   pointer-events: none;
+
+  @media (max-width: 990px) {
+    display: none !important;
+  }
 }
 </style>

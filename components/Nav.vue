@@ -12,9 +12,9 @@
         </div>
 
         <div class="nav_local-button">
-          <button data-aos="fade" data-aos-delay="100" data-aos-duration="1200">
+          <!-- <button data-aos="fade" data-aos-delay="100" data-aos-duration="1200">
             Ru
-          </button>
+          </button>-->
           <button data-aos="fade" data-aos-delay="150" data-aos-duration="1200">
             En
           </button>
@@ -36,7 +36,7 @@
               href="#"
               data-aos="fade-right"
               data-aos-delay="350"
-              @close-menu="closeMenu"
+              @click="closeMenu"
               >About us</a
             >
           </li>
@@ -47,7 +47,7 @@
               href="#"
               data-aos="fade-right"
               data-aos-delay="450"
-              @close-menu="closeMenu"
+              @click="closeMenu"
               >Products</a
             >
           </li>
@@ -58,7 +58,7 @@
               href="#"
               data-aos="fade-right"
               data-aos-delay="550"
-              @close-menu="closeMenu"
+              @click="closeMenu"
               >Why us</a
             >
           </li>
@@ -69,7 +69,7 @@
               href="#"
               data-aos="fade-right"
               data-aos-delay="650"
-              @close-menu="closeMenu"
+              @click="closeMenu"
               >Contacts</a
             >
           </li>
@@ -137,7 +137,9 @@ export default {
 
   methods: {
     closeMenu() {
-      this.$emit('close-menu')
+      setTimeout(() => {
+        this.$emit('close-menu')
+      }, 50)
     }
   }
 }
@@ -154,6 +156,7 @@ export default {
   left: 0;
   max-width: vw(830px);
   width: 100%;
+  height: 100vh;
   background-color: $red;
   z-index: 10;
   padding: vh(50px) vw(50px) vh(50px) vw(70px);
@@ -162,9 +165,9 @@ export default {
     max-width: 450px;
   }
 
-  @media (max-width: $sm) {
+  /* @media (max-width: $sm) {
     height: 100vh;
-  }
+  } */
 
   &_container {
     display: flex;
@@ -259,12 +262,13 @@ export default {
   }
 
   &_link-to {
-    margin-top: vh(115px);
+    /* margin-top: vh(115px); */
+    margin-top: auto;
     text-align: right;
 
-    @media (max-width: $sm) {
-      margin-top: auto !important;
-    }
+    /* @media (max-width: $sm) {
+      margin-top: auto;
+    } */
 
     a {
       position: relative;
