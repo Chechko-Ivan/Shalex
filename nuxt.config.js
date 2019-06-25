@@ -1,5 +1,5 @@
 export default {
-  mode: 'spa',
+  // mode: 'spa',
   /*
    ** Headers of the page
    */
@@ -19,7 +19,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#e42702' },
   /*
    ** Global CSS
    */

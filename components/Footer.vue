@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" :class="{ footerLogistics: !formTrade }">
     <div class="footer_container">
       <h2 data-aos="fade" data-aos-delay="250" data-aos-duration="1000">
         {{ title }}
@@ -9,6 +9,7 @@
         class="external-link"
         data-aos="fade-right"
         data-aos-delay="300"
+        data-aos-offset="-500"
         data-aos-duration="1000"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 407.437 407.437">
@@ -28,7 +29,7 @@
 
     <div
       class="footer_preview"
-      :style="`background-image: url('${img1}');`"
+      :style="`background-image: url('${formTrade ? img1 : img2}');`"
     ></div>
 
     <img v-if="formTrade" src="@/static/x.png" class="footer_decor" alt="x" />
@@ -37,6 +38,7 @@
 
 <script>
 import img1 from '../static/trade-footer-img.jpg'
+import img2 from '../static/logistics-footer-img.jpg'
 
 export default {
   name: 'Footer',
@@ -69,7 +71,8 @@ export default {
   },
 
   computed: {
-    img1: () => img1
+    img1: () => img1,
+    img2: () => img2
   }
 }
 </script>
@@ -82,6 +85,12 @@ export default {
 .footer {
   position: relative;
   background-color: $red;
+
+  &.footerLogistics {
+    .footer_preview {
+      width: vw(1580px);
+    }
+  }
 
   &_container {
     padding: vh(110px) 0 vh(120px) vw(490px);

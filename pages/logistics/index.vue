@@ -1,5 +1,5 @@
 <template>
-  <div class="app-wrapper">
+  <div class="app-wrapper app-wrapper--logistics">
     <div class="app-header_fixed-nav">
       <Burger
         data-aos="fade"
@@ -21,6 +21,8 @@
       data-aos="zoom-out-right"
       data-aos-delay="50"
       data-aos-duration="500"
+      :external-link-title="externalLinkTitle"
+      :external-link-url="externalLinkUrl"
       @close-menu="toggleMenu"
     ></Nav>
     <header
@@ -43,6 +45,7 @@
       class="aubout-us"
       data-aos="slide-up"
       data-aos-delay="900"
+      data-aos-offset="-1080"
       data-aos-duration="800"
     >
       <a
@@ -78,7 +81,7 @@
           imagine life before the eruption of such technologies.
         </p>
       </div>
-      <span class="aubout-us_label">Trade</span>
+      <span class="aubout-us_label">Logistics</span>
     </section>
 
     <section class="s-products">
@@ -103,13 +106,14 @@
         </div>
         <div class="s-products_title">
           <h2 data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
-            What we offer
+            Care of your
+            <br />cargo
           </h2>
-          <ul data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
+          <!-- <ul data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
             <li>- Metals and scrap</li>
             <li>- Ferroalloys</li>
             <li>- Oxides</li>
-          </ul>
+          </ul>-->
         </div>
       </div>
 
@@ -274,7 +278,14 @@
 
     <Contact></Contact>
 
-    <Footer></Footer>
+    <Footer
+      :title="footerData.title"
+      :form-trade="footerData.formTrade"
+      :ex-title="footerData.exTitle"
+      :ex-link="footerData.exLink"
+      :ex-sub-title="footerData.exSubTitle"
+      :ex-sub-title-bold="footerData.exSubTitleBold"
+    ></Footer>
 
     <ProductPopup
       v-if="popupOpen"
@@ -285,10 +296,10 @@
 </template>
 
 <script>
-import Headerbackground from '@/static/hero-trade.jpg'
-import ProductImage from '@/static/trade-product-img.jpg'
-import ProductSxema from '@/static/trade-sxema-1.png'
-import ContactDecor from '@/static/trade-contacts-image.jpg'
+import Headerbackground from '@/static/hero-logistics.jpg'
+import ProductImage from '@/static/logistics-product-img.jpg'
+import ProductSxema from '@/static/logistics-sxema-1.png'
+import ContactDecor from '@/static/logistics-contacts-image.jpg'
 
 import Burger from '@/components/Burger.vue'
 import Logo from '@/components/Logo.vue'
@@ -320,59 +331,25 @@ export default {
       menuOpen: false,
       popupOpen: false,
       productPopupData: {},
-      HeaderTitle: 'Trade',
+      externalLinkTitle: 'Trade',
+      externalLinkUrl: '/trade',
+      HeaderTitle: 'Logistics',
       HeaderText:
         'Meeting the highest quality demands is our commitment to quality',
       productData: [
         {
           id: 1,
-          title: 'Metals and scrap',
+          title: '1. We ship',
           items: [
             {
               id: 1,
-              title: 'Tantalum',
+              title: 'FTL/LTL Shipment',
               text:
                 'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
             },
             {
               id: 2,
-              title: 'Niobium',
-              text:
-                'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
-            },
-            {
-              id: 3,
-              title: 'Hafnium',
-              text:
-                'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
-            },
-            {
-              id: 4,
-              title: 'Vanadium',
-              text:
-                'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
-            },
-            {
-              id: 5,
-              title: 'Tungsten',
-              text:
-                'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
-            },
-            {
-              id: 6,
-              title: 'Molybdenum',
-              text:
-                'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
-            },
-            {
-              id: 7,
-              title: 'Nickel',
-              text:
-                'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
-            },
-            {
-              id: 8,
-              title: 'Stainless',
+              title: 'High value cargo',
               text:
                 'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
             }
@@ -380,35 +357,17 @@ export default {
         },
         {
           id: 2,
-          title: 'Ferroalloys',
+          title: '2. We srttore',
           items: [
             {
               id: 1,
-              title: 'Ferronickel',
+              title: 'Project cargo',
               text:
                 'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
             },
             {
               id: 2,
-              title: 'Ferromolybdenum',
-              text:
-                'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
-            },
-            {
-              id: 3,
-              title: 'Ferroniobium',
-              text:
-                'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
-            },
-            {
-              id: 4,
-              title: 'Ferrotangsten',
-              text:
-                'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
-            },
-            {
-              id: 5,
-              title: 'Ferrovanadium',
+              title: 'Customs clearance',
               text:
                 'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
             }
@@ -416,17 +375,23 @@ export default {
         },
         {
           id: 3,
-          title: 'Oxides',
+          title: '3. We deliver',
           items: [
             {
               id: 1,
-              title: 'Niobium Pentoxide (Nb2O5)',
+              title: 'Store, pick, pack & ship',
               text:
                 'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
             },
             {
               id: 2,
-              title: 'Tantalum Pentoxide (Ta2O5)',
+              title: 'Import/Export',
+              text:
+                'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
+            },
+            {
+              id: 3,
+              title: '24/7 online tracking',
               text:
                 'A chemical element with the symbol Ta and atomic number 73. Previously known as tantalium, its name comes from Tantalus, a villain from Greek mythology. Tantalum is a rare, hard, blue-gray, lustrous transition metal that is highly corrosion-resistant.'
             }
@@ -490,7 +455,16 @@ export default {
             'Or internet? In the blink of an eye it’s become impossible to imagine life before the eruption of such technologies.'
           ]
         }
-      ]
+      ],
+
+      footerData: {
+        title: 'Using mature market instruments',
+        formTrade: false,
+        exTitle: 'Trade',
+        exLink: '/trade',
+        exSubTitle: 'PRESS HERE TO EXPLORE',
+        exSubTitleBold: 'TRADE SECTION'
+      }
     }
   },
 

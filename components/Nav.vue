@@ -78,7 +78,7 @@
 
       <div class="nav_link-to">
         <nuxt-link
-          to="/logistics"
+          :to="externalLinkUrl"
           data-aos="fade-right"
           data-aos-delay="700"
           data-aos-offset="-1000"
@@ -88,7 +88,7 @@
               d="M203.718 322.93L21.18 140.984 0 162.232l203.718 203.055 203.72-203.055-21.18-21.248zm203.72-259.532l-21.18-21.248-182.54 181.945L21.18 42.15 0 63.398l203.718 203.055z"
             ></path>
           </svg>
-          Logistics
+          {{ externalLinkTitle }}
         </nuxt-link>
       </div>
 
@@ -119,6 +119,17 @@ export default {
   name: 'Nav',
 
   components: { Logo, Close },
+
+  props: {
+    externalLinkTitle: {
+      type: String,
+      default: 'Logistics'
+    },
+    externalLinkUrl: {
+      type: String,
+      default: '/logistics'
+    }
+  },
 
   computed: {
     LogoMaksis: () => LogoMaksis
@@ -175,7 +186,7 @@ export default {
     }
 
     svg {
-      fill: $white;
+      fill: $white !important;
     }
   }
 
