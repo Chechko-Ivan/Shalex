@@ -42,7 +42,10 @@
     </div>
 
     <div class="form_button">
-      <button @click="submit">Send message</button>
+      <span v-if="isSuccess" class="form-success"
+        >Thank you for your application.</span
+      >
+      <button @click.prevent="submit">Send message</button>
     </div>
   </form>
 </template>
@@ -57,7 +60,8 @@ export default {
       email: '',
       tel: '',
       company: '',
-      message: ''
+      message: '',
+      isSuccess: false
     }
   },
 
@@ -75,7 +79,14 @@ export default {
         body: body
       }
       fetch('./mail.php', options).then(res => {
-        console.log(res)
+        if (res.success) {
+          this.name = ''
+          this.email = ''
+          this.tel = ''
+          this.company = ''
+          this.message = ''
+          this.isSuccess = true
+        }
       })
     }
   }
@@ -111,7 +122,7 @@ export default {
 
   &_button {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 
     button {
       line-height: 1;
@@ -122,6 +133,7 @@ export default {
       padding: 0;
       padding-bottom: 3px;
       border-bottom: 1px dashed $black2;
+      margin-left: auto;
 
       &:hover {
         color: $red;
@@ -129,6 +141,11 @@ export default {
       }
     }
   }
+}
+
+.form-success {
+  font-size: em(17px);
+  color: $red;
 }
 
 .group {

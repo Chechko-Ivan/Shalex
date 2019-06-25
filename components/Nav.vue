@@ -11,14 +11,14 @@
           <Logo></Logo>
         </div>
 
-        <div class="nav_local-button">
-          <!-- <button data-aos="fade" data-aos-delay="100" data-aos-duration="1200">
+        <!-- <div class="nav_local-button">
+          <button data-aos="fade" data-aos-delay="100" data-aos-duration="1200">
             Ru
-          </button>-->
+          </button>
           <button data-aos="fade" data-aos-delay="150" data-aos-duration="1200">
             En
           </button>
-        </div>
+        </div>-->
 
         <Close
           data-aos="fade"
@@ -99,8 +99,8 @@
           data-aos-delay="1000"
           data-aos-offset="-1000"
         >
-          Developed in
           <a href="https://maksis.by">
+            Developed in
             <img :src="LogoMaksis" alt="Maksis digital agency logo" />Maksis
             digital agency
           </a>
@@ -317,6 +317,7 @@ export default {
 
     &:hover {
       color: $black;
+      text-decoration: underline;
     }
   }
 

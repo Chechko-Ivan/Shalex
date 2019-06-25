@@ -25,11 +25,11 @@
   &:hover {
     &:after,
     &:before {
-      background-color: $white;
+      background-color: $red;
     }
     .burger_line {
       width: 100%;
-      background-color: $white;
+      background-color: $red;
     }
   }
 

@@ -33,6 +33,7 @@ export default {
 <style lang="scss">
 .logo {
   width: 100%;
+  max-width: 480px;
 
   svg {
     height: auto;

@@ -1,5 +1,5 @@
 export default {
-  // mode: 'spa',
+  mode: 'spa',
   /*
    ** Headers of the page
    */
@@ -14,7 +14,24 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png'
+      },
+      { rel: 'mask-icon', color: '#5bbad5', href: '/safari-pinned-tab.svg' },
+      { rel: 'msapplication-TileColor', content: '#2d89ef' },
+      { rel: 'theme-color', content: '#ffffff' }
+    ]
   },
   /*
    ** Customize the progress-bar color

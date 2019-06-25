@@ -139,6 +139,7 @@
     </section>
 
     <section id="s-whu-us" class="s-whu-us">
+      <img class="s-whu-us_decor" :src="ProductSxema2" alt="sxema" />
       <div class="s-whu-us_container">
         <div class="s-whu-us_title">
           <h2 data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
@@ -295,6 +296,7 @@
 import Headerbackground from '@/static/hero-logistics.jpg'
 import ProductImage from '@/static/logistics-product-img.jpg'
 import ProductSxema from '@/static/logistics-sxema-1.png'
+import ProductSxema2 from '@/static/logistics-sxema-2.png'
 import ContactDecor from '@/static/logistics-contacts-image.jpg'
 
 import Burger from '@/components/Burger.vue'
@@ -353,7 +355,7 @@ export default {
         },
         {
           id: 2,
-          title: '2. We srttore',
+          title: '2. We store',
           items: [
             {
               id: 1,
@@ -468,6 +470,7 @@ export default {
     Headerbackground: () => Headerbackground,
     ProductImage: () => ProductImage,
     ProductSxema: () => ProductSxema,
+    ProductSxema2: () => ProductSxema2,
     ContactDecor: () => ContactDecor
   },
 

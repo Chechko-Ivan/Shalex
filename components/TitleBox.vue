@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/scss/colors.scss';
 @import '@/assets/scss/function.scss';
 @import '@/assets/scss/breakpoints.scss';
