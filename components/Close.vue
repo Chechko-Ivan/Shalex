@@ -29,8 +29,8 @@ export default {}
   }
 
   @media (max-width: $lg) {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 
   &::after,

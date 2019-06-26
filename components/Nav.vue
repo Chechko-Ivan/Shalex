@@ -316,7 +316,7 @@ export default {
     color: $white;
 
     &:hover {
-      color: $black;
+      // color: $black;
       text-decoration: underline;
     }
   }
