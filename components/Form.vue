@@ -78,7 +78,7 @@ export default {
         method: 'POST',
         body: body
       }
-      fetch('./mail.php', options).then(res => {
+      fetch('../mail.php', options).then(res => {
         if (res.success) {
           this.name = ''
           this.email = ''

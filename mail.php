@@ -22,8 +22,8 @@ $message.="Сообщение: ".striptags($mes);
 $mailheaders = "Content-type:text/html;charset=UTF-8";
 // формат письма html
 
-$mailheaders .= "From: SiteRobot <noreply@siterobot.ru>rn";
-$mailheaders .= "Reply-To: noreply@siterobot.rurn";
+$mailheaders .= "From: SiteRobot <noreply@siterobot.ru> \r \n";
+$mailheaders .= "Reply-To: noreply@siterobot.ru \r \n";
 // емайл отправителя и емайл для ответа
 
 mail($to, $subject, $message, $mailheaders);
