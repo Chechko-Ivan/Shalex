@@ -84,14 +84,12 @@ export default {
         body: body
       }
       fetch('../mail.php', options).then(res => {
-        if (res.success) {
-          this.name = ''
-          this.email = ''
-          this.tel = ''
-          this.company = ''
-          this.message = ''
-          this.isSuccess = true
-        }
+        this.name = ''
+        this.email = ''
+        this.tel = ''
+        this.company = ''
+        this.message = ''
+        this.isSuccess = true
       })
     }
   }

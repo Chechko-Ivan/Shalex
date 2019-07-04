@@ -99,7 +99,7 @@
           data-aos-delay="1000"
           data-aos-offset="-1000"
         >
-          <a href="https://maksis.by">
+          <a href="https://maksis.by/en">
             Developed in
             <img :src="LogoMaksis" alt="Maksis digital agency logo" />Maksis
             digital agency
@@ -277,7 +277,7 @@ export default {
       color: $white;
 
       &:hover {
-        color: $black;
+        color: rgba($white, 0.4);
 
         svg {
           transform: rotate(-90deg) translateX(50%) translateY(10px);
