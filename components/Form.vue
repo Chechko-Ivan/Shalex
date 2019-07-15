@@ -45,7 +45,7 @@
       <span v-if="isSuccess" class="form-success"
         >Thank you for your application.</span
       >
-      <button @click.prevent="submit">Send message</button>
+      <button @click="submit">Send message</button>
     </div>
   </form>
 </template>
@@ -67,6 +67,7 @@ export default {
 
   methods: {
     submit() {
+      console.log('awd')
       const body = new FormData()
       body.append('name', this.name)
       body.append('email', this.email)
