@@ -39,11 +39,11 @@ export default {
     return {
       trade: {
         title: 'Trade',
-        text: 'Meeting the highest quality demands is our commitment to quality'
+        text: 'Global. Flexible. Reliable.'
       },
       logistics: {
         title: 'Logistics',
-        text: 'Meeting the highest quality demands is our commitment to quality'
+        text: 'Multimodal. Customized solutions. Always on time.'
       }
     }
   },

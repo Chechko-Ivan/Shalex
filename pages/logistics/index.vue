@@ -52,7 +52,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 407.437 407.437">
           <path
             d="M203.718 322.93L21.18 140.984 0 162.232l203.718 203.055 203.72-203.055-21.18-21.248zm203.72-259.532l-21.18-21.248-182.54 181.945L21.18 42.15 0 63.398l203.718 203.055z"
-          ></path>
+          />
         </svg>
       </a>
       <div id="s-about" class="aubout-us_content">
@@ -70,10 +70,11 @@
           data-aos-delay="150"
           data-aos-duration="1000"
         >
-          We’re living in exciting times of an exponential audio technology
-          revolution. Remember how not long ago people didn’t have mobile
-          phones? Or internet? In the blink of an eye it’s become impossible to
-          imagine life before the eruption of such technologies.
+          Our logistics department offers complete and customized logistics
+          service. We specialize in FTL and LTL cargo transportation between
+          European Union and CIS countries. In partnership operated warehouses
+          in Germany, Belarus and Russia with an own truck fleet guarantee clear
+          and reliable cooperation.
         </p>
       </div>
       <span class="aubout-us_label">Logistics</span>
@@ -95,7 +96,6 @@
             data-aos-delay="100"
             data-aos-duration="1000"
           >
-            Own WAREHOUSES /
             <strong>Best QUALITY & SERVICE</strong>
           </span>
         </div>
@@ -147,11 +147,13 @@
           </h2>
           <span class="s-whu-us_breadcrumbs">
             <span class="accent">01</span>
-            / PASSIONED
+            / Multimodal
             <span class="accent">02</span>
-            / MOTIVATED
+            / Customized solutions
             <span class="accent">03</span>
-            / HARD WORKING
+            / Always on time
+            <span class="accent">04</span>
+            / Always in touch
           </span>
         </div>
         <div class="s-whu-us_content">
@@ -177,7 +179,6 @@
             data-aos-delay="100"
             data-aos-duration="1000"
           >
-            OWN WAREHOUSES /
             <span class="accent">{{ tabData[currentTabData - 1].title }}</span>
           </span>
           <p
@@ -213,7 +214,7 @@
             >
               <path
                 d="M203.718 322.93L21.18 140.984 0 162.232l203.718 203.055 203.72-203.055-21.18-21.248zm203.72-259.532l-21.18-21.248-182.54 181.945L21.18 42.15 0 63.398l203.718 203.055z"
-              ></path>
+              />
             </svg>
             <h2 class="s-contacts_title">Feel free to contact us</h2>
             <span class="s-contacts_subtitle"
@@ -332,8 +333,7 @@ export default {
       externalLinkTitle: 'Trade',
       externalLinkUrl: '/trade',
       HeaderTitle: 'Logistics',
-      HeaderText:
-        'Meeting the highest quality demands is our commitment to quality',
+      HeaderText: 'Multimodal. Customized solutions. Always on time.',
       productData: [
         {
           id: 1,
@@ -403,12 +403,12 @@ export default {
         {
           id: 1,
           active: true,
-          title: 'Reliable supplier'
+          title: 'Multimodal'
         },
         {
           id: 2,
           active: false,
-          title: 'Best quality you can find'
+          title: 'Customized solutions'
         },
         {
           id: 3,
@@ -418,39 +418,31 @@ export default {
         {
           id: 4,
           active: false,
-          title: 'Prices will satisfy you'
+          title: 'Always in touch'
         }
       ],
 
       tabData: [
         {
           id: 1,
-          title: 'BEST QUALITY & SERVICE',
-          text: [
-            'We’re living in exciting times of an exponential audio technology revolution. Remember how not long ago people didn’t have mobile phones?',
-            'Or internet? In the blink of an eye it’s become impossible to imagine life before the eruption of such technologies.'
-          ]
+          title: 'Multimodal',
+          text: ['Road, air, water transportation.']
         },
         {
           id: 2,
-          title: 'BESTTT QUALITY & SERVICE',
-          text: [
-            'We’re living in exciting times of an exponential audio technology revolution. Remember how not long ago people didn’t have mobile phones?',
-            'Or internet? In the blink of an eye it’s become impossible to imagine life before the eruption of such technologies.'
-          ]
+          title: 'Customized solutions',
+          text: ['We put our customers first and then create a solution.']
         },
         {
           id: 3,
-          title: 'BESTTT QUALITY & SERVICE',
-          text: [
-            'We’re living in exciting times of an exponential audio technology revolution. Remember how not long ago people didn’t have mobile phones?'
-          ]
+          title: 'Always on time',
+          text: ['Short delivery terms, express delivery.']
         },
         {
           id: 4,
-          title: 'BESTTTT QQQQUALITY & SERVICE',
+          title: 'Always in touch',
           text: [
-            'Or internet? In the blink of an eye it’s become impossible to imagine life before the eruption of such technologies.'
+            '24/7, satellite truck tracking by GPS, daily cargo location reports, personal manager.'
           ]
         }
       ],

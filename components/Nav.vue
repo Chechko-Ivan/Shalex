@@ -86,7 +86,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 407.437 407.437">
             <path
               d="M203.718 322.93L21.18 140.984 0 162.232l203.718 203.055 203.72-203.055-21.18-21.248zm203.72-259.532l-21.18-21.248-182.54 181.945L21.18 42.15 0 63.398l203.718 203.055z"
-            ></path>
+            />
           </svg>
           {{ externalLinkTitle }}
         </nuxt-link>
@@ -99,7 +99,7 @@
           data-aos-delay="1000"
           data-aos-offset="-1000"
         >
-          <a href="https://maksis.by">
+          <a href="https://maksis.by/en">
             Developed in
             <img :src="LogoMaksis" alt="Maksis digital agency logo" />Maksis
             digital agency
@@ -277,7 +277,7 @@ export default {
       color: $white;
 
       &:hover {
-        color: $black;
+        color: rgba($white, 0.4);
 
         svg {
           transform: rotate(-90deg) translateX(50%) translateY(10px);
@@ -308,6 +308,7 @@ export default {
   align-items: center;
   text-transform: uppercase;
   font-size: 10px;
+  margin-bottom: 70px;
   color: $white;
 
   a {

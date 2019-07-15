@@ -45,7 +45,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 407.437 407.437">
           <path
             d="M203.718 322.93L21.18 140.984 0 162.232l203.718 203.055 203.72-203.055-21.18-21.248zm203.72-259.532l-21.18-21.248-182.54 181.945L21.18 42.15 0 63.398l203.718 203.055z"
-          ></path>
+          />
         </svg>
       </a>
       <div id="s-about" class="aubout-us_content">
@@ -63,10 +63,11 @@
           data-aos-delay="150"
           data-aos-duration="1000"
         >
-          We’re living in exciting times of an exponential audio technology
-          revolution. Remember how not long ago people didn’t have mobile
-          phones? Or internet? In the blink of an eye it’s become impossible to
-          imagine life before the eruption of such technologies.
+          Shalex Trade & Logistics is an internationally operating company for
+          trading with stainless steel scrap and special alloys. Based in
+          Estonia, Tallin and having a network of affiliates and subsidiaries,
+          we offer our partners a wide product range with a complete logistics
+          service.
         </p>
       </div>
       <span class="aubout-us_label">Trade</span>
@@ -88,7 +89,6 @@
             data-aos-delay="100"
             data-aos-duration="1000"
           >
-            Own WAREHOUSES /
             <strong>Best QUALITY & SERVICE</strong>
           </span>
         </div>
@@ -96,11 +96,11 @@
           <h2 data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
             What we offer
           </h2>
-          <ul data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
+          <!-- <ul data-aos="fade" data-aos-delay="100" data-aos-duration="1000">
             <li>- Metals and scrap</li>
             <li>- Ferroalloys</li>
             <li>- Oxides</li>
-          </ul>
+          </ul>-->
         </div>
       </div>
 
@@ -138,11 +138,13 @@
           </h2>
           <span class="s-whu-us_breadcrumbs">
             <span class="accent">01</span>
-            / PASSIONED
+            / Global
             <span class="accent">02</span>
-            / MOTIVATED
+            / Flexible
             <span class="accent">03</span>
-            / HARD WORKING
+            / Reliable
+            <span class="accent">04</span>
+            / Hard working
           </span>
         </div>
         <div class="s-whu-us_content">
@@ -168,7 +170,6 @@
             data-aos-delay="100"
             data-aos-duration="1000"
           >
-            OWN WAREHOUSES /
             <span class="accent">{{ tabData[currentTabData - 1].title }}</span>
           </span>
           <p
@@ -204,7 +205,7 @@
             >
               <path
                 d="M203.718 322.93L21.18 140.984 0 162.232l203.718 203.055 203.72-203.055-21.18-21.248zm203.72-259.532l-21.18-21.248-182.54 181.945L21.18 42.15 0 63.398l203.718 203.055z"
-              ></path>
+              />
             </svg>
             <h2 class="s-contacts_title">Feel free to contact us</h2>
             <span class="s-contacts_subtitle"
@@ -256,6 +257,7 @@
         </div>
         <div class="s-banner_col">
           <Button
+            v-scroll-to="'#s-form'"
             data-aos="fade"
             data-aos-delay="300"
             data-aos-duration="900"
@@ -313,8 +315,7 @@ export default {
       popupOpen: false,
       productPopupData: {},
       HeaderTitle: 'Trade',
-      HeaderText:
-        'Meeting the highest quality demands is our commitment to quality',
+      HeaderText: 'Global. Flexible. Reliable.',
       productData: [
         {
           id: 1,
@@ -432,55 +433,49 @@ export default {
         {
           id: 1,
           active: true,
-          title: 'Reliable supplier'
+          title: 'Global'
         },
         {
           id: 2,
           active: false,
-          title: 'Best quality you can find'
+          title: 'Flexible'
         },
         {
           id: 3,
           active: false,
-          title: 'Always on time'
+          title: 'Reliable'
         },
         {
           id: 4,
           active: false,
-          title: 'Prices will satisfy you'
+          title: 'Hard working'
         }
       ],
 
       tabData: [
         {
           id: 1,
-          title: 'BEST QUALITY & SERVICE',
+          title: 'Global',
           text: [
-            'We’re living in exciting times of an exponential audio technology revolution. Remember how not long ago people didn’t have mobile phones?',
-            'Or internet? In the blink of an eye it’s become impossible to imagine life before the eruption of such technologies.'
+            'We operate on 3 continents to provide our diverse pool of small and midsized corporations as well as global players with right product or service.'
           ]
         },
         {
           id: 2,
-          title: 'BESTTT QUALITY & SERVICE',
+          title: 'Flexible',
           text: [
-            'We’re living in exciting times of an exponential audio technology revolution. Remember how not long ago people didn’t have mobile phones?',
-            'Or internet? In the blink of an eye it’s become impossible to imagine life before the eruption of such technologies.'
+            'We put our customer’s needs first and offer the best solution.'
           ]
         },
         {
           id: 3,
-          title: 'BESTTT QUALITY & SERVICE',
-          text: [
-            'We’re living in exciting times of an exponential audio technology revolution. Remember how not long ago people didn’t have mobile phones?'
-          ]
+          title: 'Reliable',
+          text: ['On-time delivery, quality guarantee, clear pricing policy.']
         },
         {
           id: 4,
-          title: 'BESTTTT QQQQUALITY & SERVICE',
-          text: [
-            'Or internet? In the blink of an eye it’s become impossible to imagine life before the eruption of such technologies.'
-          ]
+          title: 'Hard working',
+          text: ['Feel free to contact us 24/7.']
         }
       ]
     }

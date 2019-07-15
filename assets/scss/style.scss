@@ -385,7 +385,7 @@ a {
 
   &_text {
     margin-top: vh(60px);
-    font-size: em(18px);
+    font-size: em(14px);
     line-height: 1.4;
     color: $white;
   }
@@ -424,7 +424,7 @@ a {
 
     &:hover {
       svg {
-        fill: $black;
+        fill: rgba($white, 0.4);
       }
     }
 
@@ -737,8 +737,9 @@ a {
   }
 
   &_text {
-    font-size: em(18px);
+    font-size: em(14px);
     line-height: 1.4;
+    color: #717171;
 
     @media (max-width: $sm) {
       font-size: em(14px);

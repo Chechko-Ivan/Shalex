@@ -2,30 +2,35 @@
   <form class="form">
     <div class="form_row">
       <div class="group">
-        <input v-model="name" type="text" required />
+        <input v-model="name" type="text" required placeholder="placeholder" />
         <span class="highlight"></span>
         <span class="bar"></span>
-        <label>Name</label>
+        <label>Name *</label>
       </div>
 
       <div class="group">
-        <input v-model="email" type="email" required />
+        <input
+          v-model="email"
+          type="email"
+          required
+          placeholder="placeholder"
+        />
         <span class="highlight"></span>
         <span class="bar"></span>
-        <label>Email</label>
+        <label>Email *</label>
       </div>
     </div>
 
     <div class="form_row">
       <div class="group">
-        <input v-model="tel" type="tel" required />
+        <input v-model="tel" type="tel" required placeholder="placeholder" />
         <span class="highlight"></span>
         <span class="bar"></span>
-        <label>Tel.</label>
+        <label>Tel. *</label>
       </div>
 
       <div class="group">
-        <input v-model="company" type="text" required />
+        <input v-model="company" type="text" placeholder="placeholder" />
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>Company</label>
@@ -34,7 +39,7 @@
 
     <div class="form_row">
       <div class="group w100">
-        <input v-model="message" type="text" required />
+        <input v-model="message" type="text" placeholder="placeholder" />
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>Message</label>
@@ -80,14 +85,12 @@ export default {
         body: body
       }
       fetch('../mail.php', options).then(res => {
-        if (res.success) {
-          this.name = ''
-          this.email = ''
-          this.tel = ''
-          this.company = ''
-          this.message = ''
-          this.isSuccess = true
-        }
+        this.name = ''
+        this.email = ''
+        this.tel = ''
+        this.company = ''
+        this.message = ''
+        this.isSuccess = true
       })
     }
   }
@@ -182,6 +185,10 @@ input {
   width: 100%;
   border: none;
   border-bottom: 1px solid #757575;
+
+  &::placeholder {
+    opacity: 0;
+  }
 }
 
 input:focus {
@@ -203,7 +210,7 @@ label {
 
 /* active state */
 input:focus ~ label,
-input:valid ~ label {
+input:not(:placeholder-shown) ~ label {
   top: -10px;
   font-size: 12px;
   color: $red;
