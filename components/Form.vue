@@ -47,9 +47,7 @@
     </div>
 
     <div class="form_button">
-      <span v-if="isSuccess" class="form-success"
-        >Thank you for your application.</span
-      >
+      <span v-if="callback.length" class="form-success">{{ callback }}</span>
       <button @click.prevent="submit">Send message</button>
     </div>
   </form>
@@ -66,31 +64,38 @@ export default {
       tel: '',
       company: '',
       message: '',
-      isSuccess: false
+      callback: ''
+      // isSuccess: false
     }
   },
 
   methods: {
     submit() {
-      const body = new FormData()
-      body.append('name', this.name)
-      body.append('email', this.email)
-      body.append('tel', this.tel)
-      body.append('company', this.company)
-      body.append('message', this.message)
+      if (this.name.length && this.email.length && this.tel.length) {
+        const body = new FormData()
+        body.append('name', this.name)
+        body.append('email', this.email)
+        body.append('tel', this.tel)
+        body.append('company', this.company)
+        body.append('message', this.message)
 
-      const options = {
-        method: 'POST',
-        body: body
+        const options = {
+          method: 'POST',
+          body: body
+        }
+
+        fetch('../mail.php', options).then(res => {
+          this.name = ''
+          this.email = ''
+          this.tel = ''
+          this.company = ''
+          this.message = ''
+          this.callback = 'Thank you for your application.'
+          // this.isSuccess = true
+        })
+      } else {
+        this.callback = 'Fields Name, Email and Phone Required!'
       }
-      fetch('../mail.php', options).then(res => {
-        this.name = ''
-        this.email = ''
-        this.tel = ''
-        this.company = ''
-        this.message = ''
-        this.isSuccess = true
-      })
     }
   }
 }

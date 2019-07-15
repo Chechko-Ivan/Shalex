@@ -28,6 +28,10 @@ export default {
   width: max-content;
   padding: 0 10px;
   margin-bottom: vh(40px);
+
+  @media (max-height: 400px) {
+    margin-bottom: vh(20px);
+  }
 }
 
 h1 {
@@ -37,6 +41,10 @@ h1 {
   color: $white;
   font-weight: 900;
   z-index: 1;
+
+  @media (max-height: 400px) {
+    font-size: em(45px);
+  }
 }
 
 .red-flesh {

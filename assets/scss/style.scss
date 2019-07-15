@@ -30,7 +30,7 @@ a {
 }
 
 * {
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  // transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .page-enter-active,
@@ -67,6 +67,7 @@ a {
   &_container {
     display: flex;
     height: 100%;
+    // min-height: 568px;
     overflow: hidden;
 
     @media (max-width: $lg) {
@@ -98,6 +99,14 @@ a {
     }
 
     @media (max-width: $sm) {
+      max-width: 250px !important;
+    }
+
+    @media (width: 812px), (height: 375px) {
+      max-width: 200px;
+    }
+
+    @media (max-height: 400px) {
       max-width: 250px !important;
     }
   }
@@ -421,12 +430,13 @@ a {
 
     &:hover {
       svg {
-        fill: rgba($white, 0.4);
+        fill: $white;
       }
     }
 
     svg {
-      fill: $white;
+      transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+      fill: rgba($white, 0.4);
     }
   }
 }

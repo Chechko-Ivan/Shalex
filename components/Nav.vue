@@ -277,9 +277,10 @@ export default {
       color: $white;
 
       &:hover {
-        color: rgba($white, 0.4);
+        /* color: rgba($white, 0.4); */
 
         svg {
+          fill: $white;
           transform: rotate(-90deg) translateX(50%) translateY(10px);
         }
       }
@@ -291,6 +292,7 @@ export default {
         left: 0;
         width: 13px;
         height: 13px;
+        transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
         transform: rotate(-90deg) translateX(50%);
       }
     }
