@@ -481,6 +481,19 @@ export default {
     }
   },
 
+  head() {
+    return {
+      title: 'Shalex Trade',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Shalex Trade & Logistics is an internationally operating company for trading with stainless steel scrap and special alloys.'
+        }
+      ]
+    }
+  },
+
   computed: {
     Headerbackground: () => Headerbackground,
     ProductImage: () => ProductImage,
