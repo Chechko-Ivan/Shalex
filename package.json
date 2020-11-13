@@ -13,6 +13,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^2.3.2",
     "aos": "^3.0.0-beta.6",
     "nuxt": "^2.0.0",
     "vue-scrollto": "^2.15.0"

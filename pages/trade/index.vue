@@ -239,10 +239,11 @@
             data-aos-delay="100"
             data-aos-duration="1000"
           >
-            Simple as bottle of water.
-            <br />Trust & security is our priority.
+            <!-- Simple as bottle of water. -->
+            <!-- <br /> -->
+            Trust & security is our priority.
           </h2>
-          <p
+          <!-- <p
             class="s-banner_text"
             data-aos="fade-up"
             data-aos-delay="100"
@@ -253,7 +254,7 @@
             can also enter the name of the coffee shop in the search space and
             get a detailed description, read reviews and recommendations and get
             acquainted with the menu.
-          </p>
+          </p> -->
         </div>
         <div class="s-banner_col">
           <Button
@@ -296,6 +297,31 @@ import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'Trade',
+
+  head() {
+    return {
+      title: 'Shalex Trade',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Shalex Trade & Logistics is an internationally operating company for trading with stainless steel scrap and special alloys.'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Shalex Trade'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'Shalex Trade & Logistics is an internationally operating company for trading with stainless steel scrap and special alloys.'
+        }
+      ]
+    }
+  },
 
   components: {
     Burger,
