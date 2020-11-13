@@ -183,11 +183,11 @@ export default {
 
   &:hover {
     .external-link_title {
-      color: rgba($white, 0.4);
+      /* color: rgba($white, 0.4); */
     }
 
     svg {
-      fill: rgba($white, 0.4);
+      /* fill: rgba($white, 0.4); */
       transform: rotate(-90deg) translateY(10px);
     }
   }
@@ -214,6 +214,7 @@ export default {
     height: vw(45px);
     fill: $white;
     transform: rotate(-90deg);
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 
     @media (max-width: $md) {
       width: 25px;

@@ -484,6 +484,19 @@ export default {
     }
   },
 
+  head() {
+    return {
+      title: 'Shalex Logistics',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Our logistics department offers complete and customized logistics service. We specialize in FTL and LTL cargo transportation between European Union and CIS countries.'
+        }
+      ]
+    }
+  },
+
   computed: {
     Headerbackground: () => Headerbackground,
     ProductImage: () => ProductImage,

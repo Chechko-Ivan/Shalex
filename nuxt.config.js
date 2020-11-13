@@ -10,6 +10,7 @@ export default {
   rootDir: __dirname,
 
   head: {
+<<<<<<< HEAD
     htmlAttrs: {
       lang: 'en',
       prefix: 'og: http://ogp.me/ns#'
@@ -17,6 +18,9 @@ export default {
 
     title: 'Shalex Trade & Logistics',
 
+=======
+    title: 'Shalex Trade & Logistics',
+>>>>>>> 46bcb12610b48f94a6ccd76cdc5cd6b6f51f7605
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -24,6 +28,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
+<<<<<<< HEAD
           'Shalex Trade & Logistics is an internationally operating company for trading and logistics.'
       },
       {
@@ -46,6 +51,9 @@ export default {
         hid: 'og:image',
         property: 'og:image',
         content: '/favicon/apple-touch-icon.png'
+=======
+          'Shalex Trade & Logistics is an internationally operating company for trading and logistics'
+>>>>>>> 46bcb12610b48f94a6ccd76cdc5cd6b6f51f7605
       }
     ],
 

@@ -30,7 +30,7 @@ a {
 }
 
 * {
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  // transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .page-enter-active,
@@ -102,6 +102,13 @@ a {
       max-width: 250px !important;
     }
 
+    @media (width: 812px), (height: 375px) {
+      max-width: 200px;
+    }
+
+    @media (max-height: 400px) {
+      max-width: 250px !important;
+    }
     // @media (max-width: 812px) and (max-)
   }
 
@@ -424,12 +431,13 @@ a {
 
     &:hover {
       svg {
-        fill: rgba($white, 0.4);
+        fill: $white;
       }
     }
 
     svg {
-      fill: $white;
+      transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+      fill: rgba($white, 0.4);
     }
   }
 }
@@ -859,7 +867,7 @@ a {
     }
 
     h2 {
-      font-size: em(64px);
+      font-size: em(57px);
       font-weight: 900;
       color: $red;
 

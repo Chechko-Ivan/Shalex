@@ -56,6 +56,10 @@ export default {
     margin: 0 15px;
   }
 
+  @media (max-height: 400px) {
+    padding: vw(30px) vw(75px) vw(25px) vw(75px);
+  }
+
   &_text {
     font-size: em(27px);
     color: $white;
@@ -65,6 +69,10 @@ export default {
     @media (max-width: $sm) {
       margin-top: vh(20px);
       font-size: em(20px);
+    }
+
+    @media (max-height: 400px) {
+      font-size: 16px;
     }
   }
 
@@ -79,6 +87,11 @@ export default {
 
     @media (max-width: $sm) {
       margin-top: vh(20px);
+    }
+
+    @media (max-height: 400px) {
+      margin-top: vh(20px);
+      font-size: em(12px);
     }
   }
 }
